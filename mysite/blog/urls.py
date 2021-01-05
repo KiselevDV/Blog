@@ -16,4 +16,6 @@ urlpatterns = [
     path('tag/<slug:tag_slug>/', views.post_list, name='post-list-by-tag'),
     # RSS для статей
     path('feed/', LatestPostFeed(), name='post_feed'),
+    # Поиск по нескольким полям (полнотекстовый поиск)
+    path('search/', views.post_search, name='post_search'),
 ]
